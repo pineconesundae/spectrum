@@ -1,9 +1,11 @@
-import React from 'react';
+import { Component } from 'react';
+import Board from '../Board/Board';
 
-class App extends React.Component {
+// eslint-disable-next-line react/prefer-stateless-function
+class App extends Component {
   render() {
     return (
-      <div>Hello world!</div>
+      <Board />
     );
   }
 }

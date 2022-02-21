@@ -1,21 +1,24 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 import App from './components/App/App';
 
 import reducer from './reducers';
 
-const store = configureStore({
+import './styles/app.scss';
+
+/* const store = configureStore({
   reducer
-});
+}); */
 
 const render = () => {
   ReactDOM.render(
-    <Provider store={store}>
+    <DndProvider backend={HTML5Backend}>
       <App />
-    </Provider>,
+    </DndProvider>,
     document.getElementById('root')
   );
 };
